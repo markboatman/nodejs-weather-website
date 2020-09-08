@@ -14,6 +14,7 @@ const getGeoCode = require('./utils/geocode');
 const getWeatherInfo = require('./utils/get-weather');
 
 
+
 console.log(__dirname);
 // console.log(path.join(__dirname, '../public'));
 
@@ -139,5 +140,5 @@ app.get('*', (req, res) => {
 // startup
 
 app.listen(port, () => {
-    console.log('Server is up on port ' port + '.');
+    console.log('Server is up on port ' + port + '.');
 });
