@@ -1,6 +1,6 @@
 // will use browser supported fetch api
 // will use this browser api http://puzzle.mead.io/puzzle
-console.log('Client side javascript is loaded app.js');
+// console.log('Client side javascript is loaded app.js');
 
 /*
 const puzzleUrl = 'http://puzzle.mead.io/puzzle';
