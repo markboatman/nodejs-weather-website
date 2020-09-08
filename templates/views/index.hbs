@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    {{!-- the path in the href below is relative to the public folder
+        registerd with the express/hbs server as the static path --}}
+    <link rel="icon" href="/img/Boatman-favicon-16-16.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class='main-content'>
+        {{>header}}
+        <p>Use this site to get weather info</p>
+        <form>
+            <input placeholder="City">
+            <button>Search</button>
+        </form>
+        <p id="location"></p>
+        <p id="weather"></p>
+    </div>
+    {{>footer}}    
+    <script src="/js/app.js"></script>
+</body>
+</html>
+
