@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const location = userLocation.value
     // console.log(location);
-    const weatherUrl = 'http://localhost:3000/weather?location=' + location;
+    const weatherUrl = '/weather?location=' + location;
     docLocation.textContent = 'Loading...';
     docWeather.textContent = '';
     fetch(weatherUrl).then((res) => {
