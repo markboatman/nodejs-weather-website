@@ -10,8 +10,8 @@ const express = require('express');
 // load in hbs explicitly
 const hbs = require('hbs');
 // my app modules
-const getGeoCode = require('./utils/geocode1.1');
-const getWeatherInfo = require('./utils/get-weather1.1');
+const getGeoCode = require('./utils/geocode');
+const getWeatherInfo = require('./utils/get-weather');
 
 
 console.log(__dirname);
