@@ -1,4 +1,8 @@
+// version features: added some more urls and responses
 const express = require('express');
+
+console.log(__dirname);
+console.log(__filename);
 
 // create an express app, or server
 const app = express();
@@ -11,26 +15,37 @@ const app = express();
 
 // this listener for url = app.com, req is reqest, res is response
 app.get('', (req, res) => {
-    // send back to requester
-    res.send('Hello express!');
+    // send html
+    res.send('<h1>Weather</h1>');
 })
 
 // this listener for url = app.com/help
 app.get('/help', (req, res) => {
-    // send back to requester
-    res.send('Help Page');
+    // send json, express will stringify it for us
+    res.send([{
+        name: 'Mark',
+        age:  '64'
+    },
+    {
+        name:   'Fred',
+        age:    '34'
+    }]);
 })
 
 // this listener for url = app.com/about
 app.get('/about', (req, res) => {
     // send back to requester
-    res.send('About Page');
+    res.send('<h2>About Page</h2>');
 })
 
 // this listener for url = app.com/weather
 app.get('/weather', (req, res) => {
     // send back to requester
-    res.send('Weather Page');
+    res.send({
+        weather: 'The weather is partly cloudy',
+        temperature: 'The temperature is 87',
+        location: 'Dallas'
+    })
 })
 // start the app or server, second param is optional callback from 
 // startup
