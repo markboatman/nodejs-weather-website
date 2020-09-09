@@ -37,8 +37,10 @@ weatherForm.addEventListener('submit', (event) => {
                 docLocation.textContent = 'Error: ' + data.error;
                 docWeather.textContent = '';
             } else {
-                docLocation.textContent ='For: ' + data.location;
-                docWeather.textContent = 'The weather is ' + data.weather;
+                docLocation.textContent ='For ' + data.location + '.';
+                docWeather.textContent = 'The weather is ' + data.weather 
+                    + '. It is ' + data.temperature + ' outside but feels like ' 
+                    + data.feelslike + '. The humidity is ' + data.humidity + ' percent.';
             }
         });
     });

@@ -84,7 +84,7 @@ app.get('/weather', (req, res) => {
             // NOTE: weatherstack does not agree with the lat and log supplied by mapbox geocoding service
             // so you get the weather for someplace close to the lat and long you pass to getWeatherInfo
             getWeatherInfo(latitude, longitude, ( errorMsg, { location, description, temperature,
-                            feelslike } = {} ) => {
+                            feelslike, humidity } = {} ) => {
                 if( errorMsg !== undefined ) {
                     return res.send ({
                         error: 'Unable to get weather data. ' + errorMsg
@@ -96,6 +96,8 @@ app.get('/weather', (req, res) => {
                     location: location,
                     weather: description,
                     temperature: temperature,
+                    feelslike: feelslike,
+                    humidity: humidity,
                     inputLocation: query.location + 
                         ' - Note: mapbox and weatherstack do not agree on latitude and longitude so inputLocation and location do not match'
                 });
